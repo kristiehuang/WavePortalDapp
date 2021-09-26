@@ -2,6 +2,9 @@
 
 following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contracts](https://app.buildspace.so/) class!
 
+## brainstorming / what this could be
+* a little guestbook that lives on my website + recorded on eth chain
+
 ## technical stack
 * ethers
 * @nomiclabs/hardhat-ethers 
