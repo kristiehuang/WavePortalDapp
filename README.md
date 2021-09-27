@@ -7,6 +7,7 @@ following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contract
 
 ## backend stack
 * ethers
+    * JS library that helps our frontend talk to our contract
 * @nomiclabs/hardhat-ethers 
     * This plugin brings to Hardhat the Ethereum library ethers.js, which allows you to interact with the Ethereum blockchain in a simple way.
 * ethereum-waffle 
@@ -15,7 +16,8 @@ following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contract
 * alchemy
     * simple way to deploy to the real Ethereum blockchain
     * access a node to broadcast our contract creation transaction to miners
-
+* metamask
+    * provides a "Web3Provider" = access to nodes that send/receive data from chain
 
 
 **using Hardhat**
@@ -32,6 +34,9 @@ start local testnet & deploy on local testnet:
 * `npx hardhat node` // start and host a localhost eth testnet with 20 test accounts, kinda like Ganache
 * `npx hardhat run scripts/deploy.js --network localhost` // deploy onto local testnet & run tests
 
+deploy on testnet:
+* `npx hardhat run scripts/deploy.js --network rinkeby` // deploy onto rinkeby
+
 Every time you run a terminal command that starts with npx hardhat you are getting this hre object built on the fly using the hardhat.config.js specified in your code! This means you will never have to actually do some sort of import into your files like:
 const hardhat = require("hardhat")
 
@@ -40,6 +45,14 @@ const hardhat = require("hardhat")
 * `npx hardhat` // create sample hardhat project
 * write contract in contracts/
 * write scripts to run a few tests & to deploy on testnet
+
+### making changes
+1. We need to deploy it again: `npx hardhat run scripts/deploy.js --network rinkeby`
+2. We need to update `contractAddress` on our frontend's App.js
+3. We need to update the abi file on our frontend. 
+
+Q: Redeploying erases all state data on old smart contract; where else could we store our wave data where we could update our contract's code and keep our original data around? There are quite a few solutions here let me know what you find!
+
 
 
 ## frontend stack

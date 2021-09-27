@@ -15,18 +15,18 @@ const main = async () => {
     console.log("Contract deployed by:", owner.address);
     
     let waveCount;
-    waveCount = await waveContract.getTotalWaves();
+    waveCount = await waveContract.totalWaves();
     
     // async call to the actual contract
-    let waveTxn = await waveContract.wave();
+    let waveTxn = await waveContract.wave("Hello there!");
     // get the actual response back; wait for tx to complete
     await waveTxn.wait();
-    waveCount = await waveContract.getTotalWaves(); 
+    waveCount = await waveContract.totalWaves(); 
 
     // simulate other people hitting our functions
-    waveTxn = await waveContract.connect(randoPerson).wave();
+    waveTxn = await waveContract.connect(randoPerson).wave("Hiiiii");
     await waveTxn.wait();
-    waveCount = await waveContract.getTotalWaves();
+    waveCount = await waveContract.totalWaves();
 };
 
 const runMain = async () => {
