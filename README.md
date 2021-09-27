@@ -1,7 +1,7 @@
 # Kristie's WavePortal
 
 following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contracts](https://app.buildspace.so/) class!
-* currently deployed @ 0xB4bc34F136dC2cE99bd48Ef0d54132D26e218fB4 on Rinkeby only, not mainnet!
+* currently deployed @ 0xEd62c7320DE5C147b3e04EEDDD28cFf9b12AB1D8 on Rinkeby only, not mainnet!
 * app frontend code at https://github.com/kristiehuang/WavePortalDapp-React
 
 ## brainstorming / what this could be
