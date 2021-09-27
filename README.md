@@ -1,11 +1,12 @@
 # Kristie's WavePortal
 
 following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contracts](https://app.buildspace.so/) class!
+* currently deployed @ 0xB4bc34F136dC2cE99bd48Ef0d54132D26e218fB4 on Rinkeby only, not mainnet!
 
 ## brainstorming / what this could be
 * a little guestbook that lives on my website + recorded on eth chain
 
-## backend stack
+## backend stack/dependencies
 * ethers
     * JS library that helps our frontend talk to our contract
 * @nomiclabs/hardhat-ethers 
@@ -18,7 +19,8 @@ following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contract
     * access a node to broadcast our contract creation transaction to miners
 * metamask
     * provides a "Web3Provider" = access to nodes that send/receive data from chain
-
+* dotenv
+    * zero-dependency module that loads environment variables from a .env file into process.env
 
 **using Hardhat**
 

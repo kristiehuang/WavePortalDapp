@@ -9,8 +9,10 @@ const main = async () => {
   
     // compile our contract & generate the necessary `artifacts` files we need
     const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
-    const waveContract = await waveContractFactory.deploy();
-  
+    const waveContract = await waveContractFactory.deploy(
+        {value: hre.ethers.utils.parseEther('0.1'),}
+    );
+    await waveContract.deployed();
     console.log('WavePortal address: ', waveContract.address);
   };
   
