@@ -2,6 +2,7 @@
 
 following [buildspace's Build a Web3 App with Solidity + Ethereum Smart Contracts](https://app.buildspace.so/) class!
 * currently deployed @ 0xB4bc34F136dC2cE99bd48Ef0d54132D26e218fB4 on Rinkeby only, not mainnet!
+* app frontend code at https://github.com/kristiehuang/WavePortalDapp-React
 
 ## brainstorming / what this could be
 * a little guestbook that lives on my website + recorded on eth chain
